@@ -1,10 +1,10 @@
 # Projeto_Integrador
 
-#Crie um fork
+# Crie um fork
 
 - Clique no botão escrito fork e escolha a conta que será feita a cópia 
 
-Copiando localmente na sua máquina 
+# Copiando localmente na sua máquina 
 
 - Clique no botão verde escrito "code" (código)
 - Selecione a opção SSH e copie o link que for gerado
