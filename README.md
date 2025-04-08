@@ -1,4 +1,5 @@
 # Projeto_Integrador
+## Descrição
 
 ## Baixando o Projeto
 
@@ -15,7 +16,7 @@
   git clone https://github.com/LucasPandori/CuidarMais.git
   ```
   
-  ## Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Backend
 - **JavaScript**
