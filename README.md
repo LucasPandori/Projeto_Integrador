@@ -10,10 +10,9 @@
 - Selecione a opção SSH e copie o link que for gerado
 - No terminal do Git escreva o código "git clone" e copie o link copiado
   ```bash
-# Clone o repositório
 git clone https://github.com/LucasPandori/CuidarMais.git
 
-  ## 🛠️ Tecnologias Utilizadas
+  ## Tecnologias Utilizadas
 
 ### Backend
 - **JavaScript**
