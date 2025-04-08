@@ -5,7 +5,7 @@
 
 ### Crie um fork
 
-- Clique no botão escrito fork e escolha a conta que será feita a cópia 
+- Clique no botão escrito fork, escolha a conta que será feita a cópia e clique em "create fork"
 
 ### Copiando localmente na sua máquina 
 
