@@ -11,7 +11,7 @@
 - No terminal do Git escreva o código "git clone" e copie o link copiado
   ```bash
 git clone https://github.com/LucasPandori/CuidarMais.git
-
+  ```
   ## Tecnologias Utilizadas
 
 ### Backend
