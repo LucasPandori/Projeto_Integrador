@@ -21,6 +21,7 @@
 ### Backend
 - **JavaScript**
 - **Express**
+- **PG**
 - **Node.js**
 
 ### Frontend
