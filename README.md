@@ -22,6 +22,7 @@
 - **JavaScript**
 - **Express**
 - **PG**
+- **UUID**
 - **Node.js**
 
 ### Frontend
