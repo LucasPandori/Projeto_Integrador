@@ -12,7 +12,13 @@ export async function ListarAnimais(req, res) {
             return res.status(200).json(listar.rows)
         }
 
-        const listarFiltro = await cliente.query('SELECT * FROM pet WHERE nome = $1 OR idade = $2 OR cor = $3 OR microchipado = $4 OR especie = $5', [filtro])
+        if (filtro === Number) {
+            const listarfiltrado = await cliente.query('SELECT * FROM pet WHERE idade = $1', [filtro])
+
+            return res.status(200).json(listarfiltrado.rows)
+        }
+
+        const listarFiltro = await cliente.query('SELECT * FROM pet WHERE nome = $1 OR cor = $3 OR microchipado = $4 OR especie = $5', [filtro])
 
         return res.status(200).json(listarFiltro.rows)
 
