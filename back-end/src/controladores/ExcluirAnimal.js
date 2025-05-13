@@ -10,13 +10,13 @@ export async function ExcluirAnimal(req, res) {
 
     try {
 
-        const [rows] = await pool.query('SELECT * FROM pets WHERE id= ? AND token= ?', [id, token])
+        const [rows] = await pool.query('SELECT * FROM pets WHERE petID= ? AND token= ?', [id, token])
 
         if (rows.length === 0) {
             return res.status(404).json({ mensagem: 'Token inválido ou animal não encontrado' })
         }
 
-        await cliente.query('DELETE FROM pets where id = ?', [id])
+        await pool.query('DELETE FROM pets where petID = ?', [id])
 
         return res.status(204).end()
 
