@@ -21,7 +21,7 @@
 ### Backend
 - **JavaScript**
 - **Express**
-- **PG**
+- **MYSQL2**
 - **UUID**
 - **Node.js**
 
