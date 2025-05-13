@@ -1,34 +1,30 @@
-import pool from "../conexaoBD";
+import pool from "../conexaoBD.js";
 
 export async function ListarAnimais(req, res) {
     const { filtro } = req.query
-    const cliente = await pool.connect()
 
     try {
 
         if (!filtro) {
-            const listar = await cliente.query('SELECT * FROM pet')
+            const [rows] = await pool.query('SELECT * FROM pets')
 
-            return res.status(200).json(listar.rows)
+            return res.status(200).json(rows)
         }
 
         if (filtro === Number) {
-            const listarfiltrado = await cliente.query('SELECT * FROM pet WHERE idade = $1', [filtro])
+            const [rows] = await pool.query('SELECT * FROM pets WHERE idade = ?', [filtro])
 
-            return res.status(200).json(listarfiltrado.rows)
+            return res.status(200).json(rows)
         }
 
-        const listarFiltro = await cliente.query('SELECT * FROM pet WHERE nome = $1 OR cor = $3 OR microchipado = $4 OR especie = $5', [filtro])
+        const [rows] = await pool.query('SELECT * FROM pets WHERE nome = ? OR cor = ? OR microchipado = ? OR especie = ?', [filtro])
 
-        return res.status(200).json(listarFiltro.rows)
+        return res.status(200).json(rows)
 
 
     } catch (error) {
         console.error(error)
         return res.status(500).json({ mensagem: "Erro ao listar animais" })
 
-    } finally {
-
-        cliente.release()
     }
 }

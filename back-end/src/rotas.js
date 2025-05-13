@@ -1,8 +1,8 @@
 import { Router } from "express"
-import { CadastrarAnimal } from "./controladores/CriarAnimal"
-import { ListarAnimais } from "./controladores/Listar"
-import { EditarAnimal } from "./controladores/AtualizarAnimal"
-import { ExcluirAnimal } from "./controladores/ExcluirAnimal"
+import { CadastrarAnimal } from "./controladores/CriarAnimal.js"
+import { ListarAnimais } from "./controladores/Listar.js"
+import { EditarAnimal } from "./controladores/AtualizarAnimal.js"
+import { ExcluirAnimal } from "./controladores/ExcluirAnimal.js"
 
 const rotas = Router()
 

@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql
+    container_name: projeto_integrador
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: univesp
+      MYSQL_DATABASE: pet
+    volumes:
+      - ./db/data:/var/lib/mysql
+    ports:
+      - 3306:3306
