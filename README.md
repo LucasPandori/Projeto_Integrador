@@ -22,6 +22,8 @@
 - **JavaScript**
 - **Express**
 - **MYSQL2**
+- **Multer**
+- **Supabase**
 - **UUID**
 - **Node.js**
 
@@ -31,6 +33,7 @@
 
 ### Banco de Dados
 - **MySQL** 
+- **Docker**
 
 ---
 
