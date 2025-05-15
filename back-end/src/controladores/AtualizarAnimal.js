@@ -8,6 +8,10 @@ export async function EditarAnimal(req, res) {
         return res.status(400).json({ mensagem: 'Token obrigatório' })
     }
 
+    if (!nome || !idade || !raca || !cor || !endereco || !email) {
+        return res.status(400).json({ mensagem: "Todos os campos obrigatórios" })
+    }
+
     try {
         const [rows] = await pool.query('SELECT * FROM pets WHERE petID=? AND token=?', [id, token])
 

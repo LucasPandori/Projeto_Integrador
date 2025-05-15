@@ -7,18 +7,12 @@ CREATE TABLE pets (
     raça VARCHAR(45),
     idade INT,
     cor VARCHAR(22),
-    microchipado BOOLEAN,
+    microchipado TINYINT,
     tutor VARCHAR(100) NOT NULL,
     endereço VARCHAR(255),
     email VARCHAR(100),
     observações TEXT,
-    foto LONGBLOB,
-    token VARCHAR(1000)
-);
-
-CREATE TABLE telefone (
-  	telefone_id INT PRIMARY KEY AUTO_INCREMENT,
-    pet_ID INT NOT NULL,
+    foto VARCHAR(255),
     telefone VARCHAR(40),
-    CONSTRAINT chave_estrangeira FOREIGN KEY(pet_ID) REFERENCES pets(petID)
+    token VARCHAR(1000)
 );
